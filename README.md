@@ -1,0 +1,1 @@
+The 2025 Advent of Code solved in Rust.
