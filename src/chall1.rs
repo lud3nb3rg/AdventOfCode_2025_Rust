@@ -24,7 +24,6 @@ pub fn part2(){
     let mut res=0;
     let mut dial=50;
     for line in lines{
-        println!("Dial: {}, Res: {}, Line: {}", dial, res, line);
         if line.chars().nth(0).unwrap()=='L'{
             let mut turn = line[1..].parse::<i32>().unwrap();
             res+=turn/100;
