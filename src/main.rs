@@ -5,6 +5,8 @@ mod chall4;
 mod chall5;
 mod chall6;
 mod chall7;
+mod chall8;
+mod chall9;
 fn main() {
     // chall1::part1();
     // chall1::part2();
@@ -18,6 +20,9 @@ fn main() {
     // chall5::part2();
     // chall6::part1();
     // chall6::part2();
-    chall7::part1();
-    chall7::part2();
+    // chall7::part1();
+    // chall7::part2();
+    // chall8::part1();
+    // chall8::part2();
+    chall9::part1();
 }
