@@ -1,0 +1,21 @@
+let mut visited= HashSet::new();
+        let mut queue = std::collections::VecDeque::new();
+        queue.push_back((vec![0; voltage_target.len()], 0));
+        while queue.len() > 0 {
+            let (current_voltage, presses) = queue.pop_front().unwrap();
+            if current_voltage == voltage_target {
+                presses_sum += presses;
+                break;
+            }
+            if visited.contains(&current_voltage) || current_voltage.iter().zip(voltage_target.iter()).any(|(c, t)| c > t) {
+                continue;
+            }
+            visited.insert(current_voltage.clone());
+            for button in &buttons {
+                let mut next_voltage = current_voltage.clone();
+                for (i, &b) in button.iter().enumerate() {
+                    next_voltage[i] += b;
+                }
+                queue.push_back((next_voltage, presses + 1));
+            }
+        }

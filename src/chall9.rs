@@ -10,8 +10,6 @@ pub fn part1(){
     let coord_pairs: Vec<((u64, u64), (u64, u64))> = coords.iter().enumerate().flat_map(|(i, &coord1)| {
         coords.iter().skip(i + 1).map(move |&coord2| (coord1, coord2))
     }).collect();
-    println!("Coord pairs: {:?}", coord_pairs);
-    println!("List of areas: {:?}", coord_pairs.iter().map(|(a, b)| (a.0 as i64-b.0 as i64).abs()*(a.1 as i64-b.1 as i64).abs()).collect::<Vec<i64>>()); //A thin rectangle doesn't have area 0 in the problem statement so this formula is wrong
     let max_rectangle_area=coord_pairs.iter().map(|(a, b)| ((a.0 as i64-b.0 as i64).abs()+1)*((a.1 as i64-b.1 as i64).abs()+1)).max().unwrap();
     println!("Max rectangle area: {}", max_rectangle_area);
 }
