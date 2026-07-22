@@ -9,6 +9,8 @@ mod chall8;
 mod chall9;
 // mod chall10;
 mod chall11;
+mod chall12;
+mod mock_chall12;
 fn main() {
     // chall1::part1();
     // chall1::part2();
@@ -26,9 +28,6 @@ fn main() {
     // chall7::part2();
     // chall8::part1();
     // chall8::part2();
-    // chall9::part1();
-    // chall10::part1();
-    // chall10::part2();
-    chall11::part1();
-    chall11::part2();
+    chall9::part1();
+    chall9::part2();
 }
